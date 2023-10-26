@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Numerics.Tensors;
 using System.Runtime.CompilerServices;
@@ -251,7 +250,7 @@ public class LiteDBMemoryStore : IMemoryStore, IDisposable
         return jso;
     }
 
-    private class MemoryRecordWrapper
+    private sealed class MemoryRecordWrapper
     {
         public string Key = string.Empty;
         public string Metadata = string.Empty;
